@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10%;
+}
+
+/* WRAPPER */
+
+.wrapper{
+    width: 100%;
+}
+.wrapper .galeria{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* GALERIA */
+
+.galeria .image{
+    width: calc(100% / 3);
+    
+}
+.galeria .image img{
+    width: 100%; 
+    vertical-align: middle;
+}
