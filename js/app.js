@@ -4,6 +4,7 @@ const previewImg = previewBox.querySelector("img");
 const closeIcon = previewBox.querySelector(".icon");
 const imagenActual = previewBox.querySelector(".current-img");
 const imagenFaltantes = previewBox.querySelector(".total-img");
+const sombra = document.querySelector(".sombra");
 
 let newIndex = 0;
 
@@ -20,8 +21,10 @@ window.onload = () => {
     galeria[i].addEventListener("click", () => {
       newIndex = i;
       preview();
-      previewBox.classList.add("show");
-
+      previewBox.classList.add("show"); 
+      sombra.style.display = "block";
+      document.querySelector("body").style.overflow = "hidden";
+      
       const prevBtn = document.querySelector(".prev");
       const nextBtn = document.querySelector(".next");
 
@@ -51,6 +54,8 @@ window.onload = () => {
     prevBtn.style.display = "block";
     nextBtn.style.display = "block";
     previewBox.classList.remove("show");
+    sombra.style.display = "none";
+    document.querySelector("body").style.overflow = "auto";
   });
 };
 
